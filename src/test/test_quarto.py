@@ -32,6 +32,16 @@ class TestQuarto(unittest.TestCase):
         self.app.build_mao(None)
         m = self.app.mao1
         self.assertEqual(len(m.pecas),8)
+    def test_selecionar_peca(self ):
+        "tira peca da mao e bota no campo"
+        self.app.build_base()
+        self.assertTrue(self.app.campo != None)
+        peca = self.app.mao1[0]
+        peca.selecionou()
+        self.assertEqual(len(m.pecas), 7)
+        self.assertEqual(self.app.campo.peca,peca)
+        pass
+    
 
 
 if __name__ == '__main__':

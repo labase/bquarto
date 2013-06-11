@@ -30,10 +30,10 @@ class Quarto:
         #gui.rect(x=10, y= 10, width=800, heigth=600)
     def build_tabuleiro(self,gui):
         """docs here"""
-        self.tabuleiro =Tabuleiro(gui)
+        self.tabuleiro = Tabuleiro(gui)
     def build_mao(self,gui):
         """docs here"""
-        self.mao1 =Mao(gui)
+        self.mao1 = Mao(gui)
         #gui.rect(x=10, y= 10, width=800, heigth=600)
     #: TODO - put all the rest
 
