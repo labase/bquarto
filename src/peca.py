@@ -1,6 +1,6 @@
 """
 ############################################################
-Quarto - Mao
+Quarto - Peca
 ############################################################
 
 :Author: *Carlo E. T. Oliveira*
@@ -12,17 +12,12 @@ Quarto - Mao
 :Home: `Labase <http://labase.selfip.org/>`__
 :Copyright: 2013, `GPL <http://is.gd/3Udt>`__.
 """
-from casa import Casa
 
-class Mao:
-    """Lugar onde as pecas iniciam no jogo."""
-    def __init__(self, gui):
-        """Constroi as partes do Jogo. """
-        lugar = gui.build_mao()
-        print('mao')
-        self.casas = [Casa(casa_visual) for casa_visual in lugar]
-        
-        self.pecas = gui.build_pecas(lugar)
+class Peca:
+    """Peca que eh movimentada no jogo."""
+    def __init__(self, peca_visual):
+        """Liga a peca modelo com a visual. """
+        self.peca = peca_visual
         
     #: TODO - put all the rest
 

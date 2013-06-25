@@ -20,10 +20,9 @@ class Quarto:
     """Base do jogo com tabuleiro e duas maos."""
     def __init__(self, gui):
         """Constroi as partes do Jogo. """
-        pass
         #self.build_base(gui)
-        #self.build_tabuleiro(gui)
-        #self.build_mao(gui)
+        self.build_tabuleiro(gui)
+        self.build_mao(gui)
         
     def build_base(self,gui):
         """docs here"""
@@ -33,9 +32,7 @@ class Quarto:
         self.tabuleiro = Tabuleiro(gui)
     def build_mao(self,gui):
         """docs here"""
-        self.mao1 = Mao(gui)
-        #gui.rect(x=10, y= 10, width=800, heigth=600)
-    #: TODO - put all the rest
+        self.mao = Mao(gui)
 
 def main(doc, gui):
   print('Quarto 0.1.0')

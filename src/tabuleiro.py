@@ -17,7 +17,10 @@ class Tabuleiro:
     """Lugar com casas onde se jogam as pecas."""
     def __init__(self, gui):
         """Constroi as partes do Jogo. """
-        self.casas = range(16)
+        tabuleiro_visual = gui.build_tabuleiro()
+        print("modelo do tabuleiro")
+        self.casas = [Casa(casa_v)
+          for casa_v in tabuleiro_visual]
         
     #: TODO - put all the rest
 
