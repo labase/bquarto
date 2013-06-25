@@ -21,34 +21,17 @@ __date__ = "2013/03/29"
 <title>ActivUFRJ: Quarto</title>
 <meta http-equiv="content-type" content="application/xml;charset=utf-8" />
 <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
-<style>
-.rounded-corners {
-     -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    border-radius: 20px;
-    text-align:center;
-    background-color:#440;
-    color:#FFF;
-    font-family:arial;
-    font-weight:bold;
-    font-size:12px;
-}
-</style>
-<script type="text/javascript" src="https://activufrj.nce.ufrj.br/file/activlets/brython.js"></script>
+<script type="text/javascript" src="../libs/lib/brython.js"></script>
 <script type="text/python" src="quarto.py">
 </script>
 <script type="text/python">
-#import html
-main(doc)
+import svg
+main(doc, svg)
 </script>
 
 </head>
 <body onLoad="brython(1)">
 <div id="main">
-    <div id="head"></div>
-    <div id="labels"></div>
-    <div id="panel"></div>
 </div>
 
 

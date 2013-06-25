@@ -37,7 +37,11 @@ function $Tag(tagName,args){
                     if($arg.value!==false){
                         // option.selected=false sets it to true :-)
                         try{
-                            elt.setAttribute($arg.name.toLowerCase(),$arg.value)
+                            var arg = $arg.name.toLowerCase()
+                            elt.setAttribute(arg,$arg.value)
+                            if(arg=="class"){ // for IE
+                                elt.setAttribute("className",$arg.value)
+                            }
                         }catch(err){
                             throw ValueError("can't set attribute "+$arg.name)
                         }
